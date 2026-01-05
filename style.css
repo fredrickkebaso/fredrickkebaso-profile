@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f5f7fa;
+    color: #333;
+}
+
+header {
+    background: #0a9396;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header a {
+    color: #ffe066;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #94d2bd;
+    padding: 10px 0;
+}
+
+nav button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background: #005f73;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav button:hover {
+    background: #0a9396;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    display: none;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section.active {
+    display: block;
+}
+
+h1, h2, h3 {
+    color: #005f73;
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 10px;
+    background: #0a9396;
+    color: white;
+}

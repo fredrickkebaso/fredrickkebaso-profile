@@ -1,10 +1,14 @@
 /**
  * Dynamically loads section HTML from /files directory
+ * Smooth, fast, mobile-friendly
  */
 function loadSection(fileName) {
     const contentDiv = document.getElementById("content");
 
-    fetch(`files/${fileName}`)
+    contentDiv.style.opacity = 0;
+    contentDiv.innerHTML = `<p class="loading">Loading...</p>`;
+
+    fetch(`files/${fileName}`, { cache: "force-cache" })
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Failed to load ${fileName}`);
@@ -12,13 +16,16 @@ function loadSection(fileName) {
             return response.text();
         })
         .then(html => {
-            contentDiv.innerHTML = html;
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            setTimeout(() => {
+                contentDiv.innerHTML = html;
+                contentDiv.style.opacity = 1;
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }, 150);
         })
         .catch(error => {
             contentDiv.innerHTML = `
-                <p style="color:red;">
-                    Error loading content. Please check the file path.
+                <p style="color:red; text-align:center;">
+                    Error loading content. Please check file paths.
                 </p>
             `;
             console.error(error);

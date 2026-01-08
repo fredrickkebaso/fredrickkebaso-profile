@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Fredrick Kebaso - CV</title>
+
+    <!-- Mobile responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Styles -->
@@ -17,12 +19,14 @@
         ✉️ <a href="mailto:fredrickkebaso@gmail.com">fredrickkebaso@gmail.com</a>
     </p>
     <p>
-        🌐 <a href="https://github.com/fredrickkebaso" target="_blank">github.com/fredrickkebaso</a>
+        🌐 <a href="https://github.com/fredrickkebaso" target="_blank" rel="noopener">
+            github.com/fredrickkebaso
+        </a>
     </p>
 </header>
 
 <nav>
-    <button onclick="loadSection('files/Introduction_profile.html')">Home</button>
+    <button onclick="loadSection('Introduction_profile.html')">Home</button>
     <button onclick="loadSection('Experience.html')">Experience</button>
     <button onclick="loadSection('Education.html')">Education</button>
     <button onclick="loadSection('Projects.html')">Projects</button>
@@ -32,7 +36,6 @@
 </nav>
 
 <main>
-    <!-- Dynamic content loads here -->
     <section id="content">
         <p class="loading">Loading profile…</p>
     </section>

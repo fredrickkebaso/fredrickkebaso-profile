@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download CV | Fredrick Kebaso</title>
+</head>
+
+<body style="margin:0; font-family: Arial, sans-serif; background:#f5f7fa;">
+
+<section style="
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+">
+
+    <div style="
+        max-width:500px;
+        width:100%;
+        background:#ffffff;
+        padding:40px;
+        border-radius:10px;
+        box-shadow:0 8px 20px rgba(0,0,0,0.15);
+        text-align:center;
+    ">
+
+        <h1 style="color:#2c3e50; margin-bottom:10px;">Download an Abridged version of the CV here</h1>
+
+        <p style="color:#555; margin-bottom:30px;">
+            Enter your email address below.  
+            A copy of my abridged CV will be sent directly to your inbox.
+        </p>
+
+        <!-- FORM -->
+        <form action="https://formspree.io/f/maqqwnyv" method="POST">
+
+            <input type="email"
+                   name="visitor_email"
+                   required
+                   placeholder="Your email address"
+                   style="
+                       width:100%;
+                       padding:14px;
+                       font-size:16px;
+                       border-radius:6px;
+                       border:1px solid #ccc;
+                       margin-bottom:20px;
+                   ">
+
+            <!-- Hidden info sent to you -->
+            <input type="hidden" name="downloaded_file" value="Abridged CV PDF">
+            <input type="hidden" name="file_location" value="files/Abrigedcv.pdf">
+
+            <button type="submit"
+                    style="
+                        width:100%;
+                        padding:14px;
+                        font-size:16px;
+                        background:#2c3e50;
+                        color:white;
+                        border:none;
+                        border-radius:6px;
+                        cursor:pointer;
+                    ">
+                Request CV
+            </button>
+        </form>
+
+        <p style="margin-top:20px; font-size:14px; color:#777;">
+            I will share a copy directly to your inbox soonest.
+        </p>
+
+    </div>
+
+</section>
+
+</body>
+</html>
